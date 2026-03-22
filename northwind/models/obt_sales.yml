@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: obt_sales
+    description: >
+      The One Big Table for Sales. 
+      Combines fact_sales with dimensions (Product, Customer, Employee, Date) 
+      into a single flat table for reporting.
+    columns:
+      - name: OrderID
+        description: The original order number (Degenerate Dimension).
+        tests:
+          - not_null
+      - name: SoldAmount
+        description: Net total revenue (ExtendedPrice - Discount Amount).

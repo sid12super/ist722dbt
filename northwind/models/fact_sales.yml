@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: fact_sales
+    description: "Fact table for Sales based on Order Details and Orders."
+    columns:
+      - name: saleskey
+        tests:
+          - unique
+          - not_null
+      - name: OrderId
+        tests:
+          - not_null
+      - name: ProductId
+        tests:
+          - not_null
