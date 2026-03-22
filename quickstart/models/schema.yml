@@ -34,7 +34,7 @@ models:
           - accepted_values:
               arguments: # available in v1.10.5 and higher. Older versions can set the <argument_name> as the top-level property.
                 values: ['placed', 'shipped', 'completed', 'return_pending', 'returned']
-      - name: customer_id
+      - name: customer_id # SUID: 276852933 Name : Siddhant Kasture
         data_tests:
           - not_null
           - relationships:
